@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MikeWebsite</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+
+.w3-card-4 {
+        background-color: #3d3d3d; /* Adjust the background color as needed */
+        color: #ffffff;
+        margin: 20px;
+        padding: 20px;
+        text-align: center; /* Centers text */
+    }
+    img {
+        max-width: 100%; /* Ensures images do not exceed the container width */
+        height: auto; /* Maintains aspect ratio */
+    }
+    body {
+        font-family: Arial, sans-serif; /* Sets the default font for the page */
+    }
+
+        .w3-content {
+            max-width: 1400px;
+            margin: auto; /* Centers the container */
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        h1, h2 {
+            color: #ffffff;
+        }
+        p {
+            font-size: 16px;
+            color: #ffffff;
+        }
+        ol {
+            margin: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+
+        ul, ol {
+            list-style-type: none; /* Removes bullets or numbers */
+            padding-left: 0; /* Removes default padding */
+        }
+
+</style>
+</head>
+<header style="position: relative;">
+
+    <div class="w3-top" class="header" id="home">
+      <div class="w3-bar  w3-card w3-left-align w3-large heeder-large-screen" style="background-color: #000015;" >
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-small w3-hover-black w3-large " href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <a href="index2.html" class="w3-bar-item w3-button w3-padding-small  w3-hover-black">Home</a>
+        <div >
+        </div>
+    
+      </div>
+
+      <!-- Navbar on small screens -->
+      <div id="navDemo" class="w3-bar-block  w3-hide w3-hide-large w3-hide-medium w3-large">
+      </div>
+    </div>
+  </header>
+<body class="w3-light-grey">
+
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1400px">
+
+<!-- Header -->
+<header class="w3-container w3-center w3-padding-32"> 
+</header>
+
+<!-- Grid -->
+<div class="w3-row">
+
+<!-- Blog entries -->
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-dark-grey" style="max-width: 1400px;">
+    <body>
+        <h1>How to Install Kali Linux on VirtualBox</h1>
+
+    <p>This guide provides a detailed step-by-step process for setting up Kali Linux using Oracle VirtualBox on your existing operating system. This is ideal for running Kali safely without altering your computer's actual operating system.</p>
+
+    <h2>Requirements</h2>
+    <ol>
+        <li><strong>Oracle VirtualBox:</strong> Download and install from <a href="https://www.virtualbox.org/">https://www.virtualbox.org/</a>.</li>
+        <li><strong>Kali Linux ISO file:</strong> Download from <a href="https://www.kali.org/get-kali/">https://www.kali.org/get-kali/</a>.</li>
+        <li><strong>Minimum of 4GB of RAM (8GB recommended)</strong> for the virtual machine.</li>
+        <li><strong>20-50 GB of free disk space</strong> on your host machine for the virtual disk.</li>
+    </ol>
+
+    <h2>Installation Steps</h2>
+    <h3>Step 1: Install VirtualBox</h3>
+    <ol>
+        <li>Download and install VirtualBox on your host machine following the instructions on the VirtualBox website.</li>
+    </ol>
+
+    <h3>Step 2: Set Up a New Virtual Machine</h3>
+    <ol>
+        <li>Open VirtualBox and create a new virtual machine named "Kali Linux" with type set to Linux and version set to Debian (64-bit).</li>
+        <li>Allocate at least 2048 MB of RAM.</li>
+        <li>Create a virtual hard disk using VDI (VirtualBox Disk Image), set to dynamically allocated with at least 20 GB.</li>
+    </ol>
+
+    <h3>Step 3: Configure the Virtual Machine</h3>
+    <ol>
+        <li>Under the system settings, set the boot order to start with the optical drive.</li>
+        <li>Increase the processor count to 2 for better performance if possible.</li>
+        <li>Mount the Kali Linux ISO file to the virtual optical drive under storage settings.</li>
+        <li>Set the network settings to NAT for internet access or as required for your setup.</li>
+    </ol>
+
+    <h3>Step 4: Install Kali Linux</h3>
+    <ol>
+        <li>Start the VM and select "Graphical Install" from the Kali menu.</li>
+        <li>Follow through the installation steps, setting up language, location, keyboard, network, user, disk partitions, and installing the GRUB bootloader.</li>
+    </ol>
+
+    <h3>Step 5: Finalize Installation</h3>
+    <ol>
+        <li>Restart the VM, ensuring the ISO is unmounted, to boot into your new Kali Linux installation.</li>
+    </ol>
+
+    <h3>Step 6: Post Installation</h3>
+    <ol>
+        <li>Install VirtualBox Guest Additions for enhanced functionality and performance.</li>
+    </ol>
+
+      </div>
+    </div>
+    <hr>
+
+<!-- END BLOG ENTRIES -->
+</div>
+
+<!-- Introduction menu -->
+  <!-- Posts -->
+ 
+  <!-- Labels / tags -->
+  
+<!-- END Introduction Menu -->
+</div>
+
+<!-- END GRID -->
+</div><br>
+
+<!-- END w3-content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+<style>
+    .fa-linkedin {
+        background: #007bb5;
+        color: white;
+      } 
+
+      .fa-github {
+        background: #575656;
+        color: white;
+      }
+    </style>
+
+    <!-- Add font awesome icons -->
+<a href="https://www.linkedin.com/in/michael-ricci-456003282" class="fa fa-linkedin"></a>
+<a href="https://github.com/MichaelRicci" class="fa fa-github"></a>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+</body>
+</html>

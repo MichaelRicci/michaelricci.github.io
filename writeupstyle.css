@@ -1,0 +1,7 @@
+
+body {
+    margin: 0;
+    padding: 40px; /* Adjust padding to create some space between the border and the content */
+    box-sizing: border-box;
+    border: 5px solid #333; /* Adjust the color and size as needed */
+}
