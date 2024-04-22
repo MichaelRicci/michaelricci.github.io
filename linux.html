@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Install Kali Linux on VirtualBox</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        p {
+            font-size: 16px;
+            color: #34495e;
+        }
+        ul {
+            margin: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>How to Install Kali Linux on VirtualBox</h1>
+
+    <p>This guide provides a detailed step-by-step process for setting up Kali Linux using Oracle VirtualBox on your existing operating system. This is ideal for running Kali safely without altering your computer's actual operating system.</p>
+
+    <h2>Requirements</h2>
+    <ul>
+        <li><strong>Oracle VirtualBox:</strong> Download and install from <a href="https://www.virtualbox.org/">https://www.virtualbox.org/</a>.</li>
+        <li><strong>Kali Linux ISO file:</strong> Download from <a href="https://www.kali.org/get-kali/">https://www.kali.org/get-kali/</a>.</li>
+        <li><strong>Minimum of 4GB of RAM (8GB recommended)</strong> for the virtual machine.</li>
+        <li><strong>20-50 GB of free disk space</strong> on your host machine for the virtual disk.</li>
+    </ul>
+
+    <h2>Installation Steps</h2>
+    <h3>Step 1: Install VirtualBox</h3>
+    <ul>
+        <li>Download and install VirtualBox on your host machine following the instructions on the VirtualBox website.</li>
+    </ul>
+
+    <h3>Step 2: Set Up a New Virtual Machine</h3>
+    <ul>
+        <li>Open VirtualBox and create a new virtual machine named "Kali Linux" with type set to Linux and version set to Debian (64-bit).</li>
+        <li>Allocate at least 2048 MB of RAM.</li>
+        <li>Create a virtual hard disk using VDI (VirtualBox Disk Image), set to dynamically allocated with at least 20 GB.</li>
+    </ul>
+
+    <h3>Step 3: Configure the Virtual Machine</h3>
+    <ul>
+        <li>Under the system settings, set the boot order to start with the optical drive.</li>
+        <li>Increase the processor count to 2 for better performance if possible.</li>
+        <li>Mount the Kali Linux ISO file to the virtual optical drive under storage settings.</li>
+        <li>Set the network settings to NAT for internet access or as required for your setup.</li>
+    </ul>
+
+    <h3>Step 4: Install Kali Linux</h3>
+    <ul>
+        <li>Start the VM and select "Graphical Install" from the Kali menu.</li>
+        <li>Follow through the installation steps, setting up language, location, keyboard, network, user, disk partitions, and installing the GRUB bootloader.</li>
+    </ul>
+
+    <h3>Step 5: Finalize Installation</h3>
+    <ul>
+        <li>Restart the VM, ensuring the ISO is unmounted, to boot into your new Kali Linux installation.</li>
+    </ul>
+
+    <h3>Step 6: Post Installation</h3>
+    <ul>
+        <li>Install VirtualBox Guest Additions for enhanced functionality and performance.</li>
+    </ul>
+
+    <footer>
+        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </footer>
+</body>
+</html>

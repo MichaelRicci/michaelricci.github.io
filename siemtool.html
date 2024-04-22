@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MikeWebsite</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+
+.w3-card-4 {
+        background-color: #3d3d3d; /* Adjust the background color as needed */
+        color: #ffffff;
+        margin: 20px;
+        padding: 20px;
+        text-align: center; /* Centers text */
+    }
+    img {
+        max-width: 100%; /* Ensures images do not exceed the container width */
+        height: auto; /* Maintains aspect ratio */
+    }
+    body {
+        font-family: Arial, sans-serif; /* Sets the default font for the page */
+    }
+
+        .w3-content {
+            max-width: 1400px;
+            margin: auto; /* Centers the container */
+            box-sizing: border-box;
+        }
+
+</style>
+</head>
+<header style="position: relative;">
+
+    <div class="w3-top" class="header" id="home">
+      <div class="w3-bar  w3-card w3-left-align w3-large heeder-large-screen" style="background-color: #000015;" >
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-small w3-hover-black w3-large " href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <a href="index2.html" class="w3-bar-item w3-button w3-padding-small  w3-hover-black">Home</a>
+        <div >
+        </div>
+    
+      </div>
+
+      <!-- Navbar on small screens -->
+      <div id="navDemo" class="w3-bar-block  w3-hide w3-hide-large w3-hide-medium w3-large">
+      </div>
+    </div>
+  </header>
+<body class="w3-light-grey">
+
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1400px">
+
+<!-- Header -->
+<header class="w3-container w3-center w3-padding-32"> 
+
+</header>
+
+<!-- Grid -->
+<div class="w3-row">
+
+<!-- Blog entries -->
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-dark-grey" style="max-width: 1400px;">
+    <body>
+        <h1>Analyzing Network Traffic to Find Passwords</h1>
+    
+        <h2>Step 1: Taking a look at the interface</h2>
+        <p>When you look at Wireshark for the first time it is quite intimidating so let's break it down. Starting at the top you have the main toolbar which (from left to right) consists of the different capture buttons, file capture options, packet selection options, color rules and zoom options. Beneath that you have the filter toolbar. Finally, the main areas of the interface (starting from top to bottom) are the Packet List Pane, Packet Details Pane and the Packet Bytes Pane. There is more info on the the Wireshark interface in my (Wireshark intro placeholder) write up.</p>
+        <img src="Wiresharkinterface.png" alt="WireShark Interface" width="1280">
+
+        <h2>Step 2: Capturing Packets</h2>
+        <p>Typically you would start by selecting the network interface you want to capture traffic from. Click on the "Start" button to begin capturing packets. However, in this example, we will look at a Capture the Flag (CTF) that I had to do for school at UMGC. For that reason I will not show what the final flag is but how to get to it. This is not intended to plagiarize, it is for educational purposes only.</p>
+        <img src="https://github.com/MichaelRicci/WireShark-Packet-Analysis/assets/154825271/8a211981-ec0a-4e33-9688-7ab2435c6634" alt="Wireshark Password CTF 1" width="1280">
+    
+        <h2>Step 3: Begin Packet Analysis</h2>
+        <h6><ins>Credentials Tool</ins></h6>
+        <p>Now that we have our file loaded it is time to start our analysis. Since we know the objective is to find a password let's use one of Wireshark's tools to begin tracking it down. The "Credentials" tool will help us find any packets that contain references to passwords.</p>
+        <br>
+        <img src="https://github.com/MichaelRicci/WireShark-Packet-Analysis/assets/154825271/35e08d95-9efe-4aa4-a5ac-adc1a8a7eb67" alt="Tools tab">
+        <br>
+        <p>Once we select the tool a Window will open providing us the relevant packets.</p>
+        <br>
+        <img src="https://github.com/MichaelRicci/WireShark-Packet-Analysis/assets/154825271/08b923b9-ecb7-41ef-9bc0-da34e0abba50" alt="Credentials Tool" width="475">
+        <br>
+        <p>From this window we can click on the packet number to bring up the packet itself.</p>
+        <br>
+        <img src="https://github.com/MichaelRicci/WireShark-Packet-Analysis/assets/154825271/64fb64b3-abb7-4995-b3e9-9880ac5cbed7" alt="Packet Selection">
+    
+        <h6><ins>Filtering</ins></h6>
+        <p>At the top of the page in the filter bar we can begin to filter packets via ports such as FTP, SSH and TELNET. Let's start with FTP to filter down to only the packets that used FTP.</p>
+        <br>
+        <img src="https://github.com/MichaelRicci/WireShark-Packet-Analysis/assets/154825271/6b155e52-7191-4149-b638-c20436a257dd" alt="ftp return" width="1280">
+        <br>
+        <p>Packets can contain a ton of information so it's important to understand how to sift through it all to find the information that is relevant to you. For now we will use "Follow TCP Stream" to see all the other traffic this packet is associated with.</p>
+        <br>
+        <img src="https://github.com/MichaelRicci/WireShark-Packet-Analysis/assets/154825271/8126db33-618d-48fb-8a88-e2f8406bf1e6" alt="selecting TCP stream" width="1280">
+        <br>
+        <p>This too will open a window. In this window, you will see the traffic associated with this packet. You will notice a number before each line of the server text (blue highlighted text means server text, red means client text). These are called HTTP status codes. The 100-199 range means informational response, 200-299 range signifies success and 300-399 means redirection messages. For example, you will notice next to the server client text with 226 the message reads "Transfer complete". This stream revealed to us the text file "mypasswordfile.txt". We can now do one final filter to capture the flag.</p>
+        <br>
+        <img src="https://github.com/MichaelRicci/WireShark-Packet-Analysis/assets/154825271/9ac24188-b3ad-4ee9-a2f4-6d8fc08cdd4b" alt="TCP stream window" width="856">
+    
+        <h6><ins>Capturing the Flag</ins></h6>
+        <p>The last technique to help us find the flag is by using the "frame contains" command. By entering "frame contains 'password'" we will be given back a few packets. You will notice the last packet listed isn't a normal FTP packet.</p>
+        <img src="https://github.com/MichaelRicci/WireShark-Packet-Analysis/assets/154825271/85a53c60-dae9-420d-8fff-287f1be9d1ef" alt="flag captured" width="1280">
+    
+        <h2>Congratulations!</h2>
+        <p>You have captured the flag!</p>
+      </div>
+    </div>
+    <hr>
+
+<!-- END BLOG ENTRIES -->
+</div>
+
+<!-- Introduction menu -->
+  <!-- Posts -->
+ 
+  <!-- Labels / tags -->
+  
+<!-- END Introduction Menu -->
+</div>
+
+<!-- END GRID -->
+</div><br>
+
+<!-- END w3-content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+<style>
+    .fa-linkedin {
+        background: #007bb5;
+        color: white;
+      } 
+
+      .fa-github {
+        background: #575656;
+        color: white;
+      }
+    </style>
+
+    <!-- Add font awesome icons -->
+<a href="https://www.linkedin.com/in/michael-ricci-456003282" class="fa fa-linkedin"></a>
+<a href="https://github.com/MichaelRicci" class="fa fa-github"></a>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+</body>
+</html>
