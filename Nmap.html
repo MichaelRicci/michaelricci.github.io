@@ -68,49 +68,57 @@ and is wrapped around the whole page content, except for the footer in this exam
   <!-- Blog entry -->
   <div class="w3-card-4 w3-margin w3-dark-grey" style="max-width: 1400px;">
     <body>
-        <h1>Analyzing Network Traffic to Find Passwords</h1>
-    
-        <h2>Step 1: Taking a look at the interface</h2>
-        <p>When you look at Wireshark for the first time it is quite intimidating so let's break it down. Starting at the top you have the main toolbar which (from left to right) consists of the different capture buttons, file capture options, packet selection options, color rules and zoom options. Beneath that you have the filter toolbar. Finally, the main areas of the interface (starting from top to bottom) are the Packet List Pane, Packet Details Pane and the Packet Bytes Pane. There is more info on the the Wireshark interface in my (Wireshark intro placeholder) write up.</p>
-        <img src="Wiresharkinterface.png" alt="WireShark Interface" width="1280">
+        # How to Download, Set Up, and Use Feeder: The RSS Feed Extension
 
-        <h2>Step 2: Capturing Packets</h2>
-        <p>Typically you would start by selecting the network interface you want to capture traffic from. Click on the "Start" button to begin capturing packets. However, in this example, we will look at a Capture the Flag (CTF) that I had to do for school at UMGC. For that reason I will not show what the final flag is but how to get to it. This is not intended to plagiarize, it is for educational purposes only.</p>
-        <img src="https://github.com/MichaelRicci/WireShark-Packet-Analysis/assets/154825271/8a211981-ec0a-4e33-9688-7ab2435c6634" alt="Wireshark Password CTF 1" width="1280">
-    
-        <h2>Step 3: Begin Packet Analysis</h2>
-        <h6><ins>Credentials Tool</ins></h6>
-        <p>Now that we have our file loaded it is time to start our analysis. Since we know the objective is to find a password let's use one of Wireshark's tools to begin tracking it down. The "Credentials" tool will help us find any packets that contain references to passwords.</p>
-        <br>
-        <img src="https://github.com/MichaelRicci/WireShark-Packet-Analysis/assets/154825271/35e08d95-9efe-4aa4-a5ac-adc1a8a7eb67" alt="Tools tab">
-        <br>
-        <p>Once we select the tool a Window will open providing us the relevant packets.</p>
-        <br>
-        <img src="https://github.com/MichaelRicci/WireShark-Packet-Analysis/assets/154825271/08b923b9-ecb7-41ef-9bc0-da34e0abba50" alt="Credentials Tool" width="475">
-        <br>
-        <p>From this window we can click on the packet number to bring up the packet itself.</p>
-        <br>
-        <img src="https://github.com/MichaelRicci/WireShark-Packet-Analysis/assets/154825271/64fb64b3-abb7-4995-b3e9-9880ac5cbed7" alt="Packet Selection">
-    
-        <h6><ins>Filtering</ins></h6>
-        <p>At the top of the page in the filter bar we can begin to filter packets via ports such as FTP, SSH and TELNET. Let's start with FTP to filter down to only the packets that used FTP.</p>
-        <br>
-        <img src="https://github.com/MichaelRicci/WireShark-Packet-Analysis/assets/154825271/6b155e52-7191-4149-b638-c20436a257dd" alt="ftp return" width="1280">
-        <br>
-        <p>Packets can contain a ton of information so it's important to understand how to sift through it all to find the information that is relevant to you. For now we will use "Follow TCP Stream" to see all the other traffic this packet is associated with.</p>
-        <br>
-        <img src="https://github.com/MichaelRicci/WireShark-Packet-Analysis/assets/154825271/8126db33-618d-48fb-8a88-e2f8406bf1e6" alt="selecting TCP stream" width="1280">
-        <br>
-        <p>This too will open a window. In this window, you will see the traffic associated with this packet. You will notice a number before each line of the server text (blue highlighted text means server text, red means client text). These are called HTTP status codes. The 100-199 range means informational response, 200-299 range signifies success and 300-399 means redirection messages. For example, you will notice next to the server client text with 226 the message reads "Transfer complete". This stream revealed to us the text file "mypasswordfile.txt". We can now do one final filter to capture the flag.</p>
-        <br>
-        <img src="https://github.com/MichaelRicci/WireShark-Packet-Analysis/assets/154825271/9ac24188-b3ad-4ee9-a2f4-6d8fc08cdd4b" alt="TCP stream window" width="856">
-    
-        <h6><ins>Capturing the Flag</ins></h6>
-        <p>The last technique to help us find the flag is by using the "frame contains" command. By entering "frame contains 'password'" we will be given back a few packets. You will notice the last packet listed isn't a normal FTP packet.</p>
-        <img src="https://github.com/MichaelRicci/WireShark-Packet-Analysis/assets/154825271/85a53c60-dae9-420d-8fff-287f1be9d1ef" alt="flag captured" width="1280">
-    
-        <h2>Congratulations!</h2>
-        <p>You have captured the flag!</p>
+RSS (Really Simple Syndication) feeds are an excellent way to stay updated with your favorite websites, blogs, and news outlets without having to visit each site individually. Feeder is a popular RSS feed extension that makes it easy to manage and read RSS feeds directly from your browser. This guide will walk you through the process of downloading, setting up, and using Feeder.
+
+## Downloading Feeder
+
+1. **Open Your Browser**: Feeder is available for multiple browsers, including Chrome, Firefox, and Safari. Open the browser you wish to use.
+2. **Visit the Extension Store**:
+   - For Chrome: Go to the [Chrome Web Store](https://chrome.google.com/webstore).
+   - For Firefox: Visit the [Firefox Add-ons site](https://addons.mozilla.org/en-US/firefox/).
+   - For Safari: Open the Mac App Store.
+3. **Search for Feeder**: In the search bar of the extension store, type "Feeder" and press Enter.
+4. **Select Feeder**: Click on the Feeder extension from the search results. Ensure it is the correct extension by checking the developer's information.
+5. **Add the Extension**:
+   - For Chrome: Click on "Add to Chrome" and then confirm by clicking "Add Extension".
+   - For Firefox: Click on "Add to Firefox" and then confirm by clicking "Add".
+   - For Safari: Click on the price button, follow the prompts, and enter your Apple ID if required.
+
+## Setting Up Feeder
+
+1. **Open Feeder**: Once installed, you should see the Feeder icon in your browser's toolbar. Click on it to open Feeder.
+2. **Sign In or Create an Account**: Feeder allows you to create an account or sign in with an existing one. This is useful for syncing your feeds across multiple devices.
+3. **Import Feeds**: If you have an existing list of RSS feeds, you can import them into Feeder. Look for the import option in the settings menu and upload your OPML file.
+4. **Add New Feeds**:
+   - Click on the Feeder icon and then click on "Add Feed".
+   - Enter the URL of the RSS feed you want to add. Feeder will automatically detect the feed and add it to your list.
+
+## Using Feeder
+
+1. **Accessing Your Feeds**: Click on the Feeder icon in your toolbar to see a list of your subscribed feeds. New items will be highlighted.
+2. **Reading Articles**:
+   - Click on a feed to see a list of articles.
+   - Click on an article to read it within Feeder. You can also open the original article on the website by clicking the title.
+3. **Organizing Feeds**:
+   - You can organize your feeds by creating folders. This is useful for categorizing different types of content.
+   - To create a folder, go to the Feeder settings and look for the "Organize" or "Folders" option. Drag and drop feeds into the desired folders.
+4. **Customizing Notifications**: Feeder allows you to customize notifications for new articles.
+   - Go to the Feeder settings and find the notifications section.
+   - Choose how and when you want to be notified of new articles.
+5. **Syncing Across Devices**: If you have signed in to Feeder, your feeds will sync across all devices where you have Feeder installed. This ensures you can access your feeds from anywhere.
+
+## Tips for Getting the Most Out of Feeder
+
+- **Use Keyboard Shortcuts**: Feeder supports keyboard shortcuts for quick navigation. Check the settings for a list of available shortcuts.
+- **Explore Integration Options**: Feeder integrates with other services like Pocket, Instapaper, and Evernote. You can save articles to these services for later reading.
+- **Customize the Appearance**: Feeder allows you to customize the appearance of the feed list and articles. Adjust the theme, font size, and layout to suit your preferences.
+
+## Conclusion
+
+Feeder is a powerful tool for managing and reading RSS feeds. By following this guide, you can easily download, set up, and start using Feeder to stay updated with your favorite content. Happy reading!
+
       </div>
     </div>
     <hr>
