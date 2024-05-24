@@ -1,81 +1,193 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Install Kali Linux on VirtualBox</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-        }
-        h1, h2 {
-            color: #2c3e50;
-        }
-        p {
-            font-size: 16px;
-            color: #34495e;
-        }
-        ul {
-            margin: 20px;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-    </style>
+<title>MikeWebsite</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+.blog-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.blog-box {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.blog-box img {
+  width: 150px;
+  height: auto;
+  margin-right: 20px;
+}
+.blog-box div {
+  flex: 1;
+}
+</style>
 </head>
-<body>
-    <h1>How to Install Kali Linux on VirtualBox</h1>
+<header style="position: relative;">
+    <div class="w3-top" class="header" id="home">
+      <div class="w3-bar  w3-card w3-left-align w3-large heeder-large-screen" style="background-color: #000015;" >
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-small w3-hover-black w3-large " href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <a href="index.html" class="w3-bar-item w3-button w3-padding-small  w3-hover-black">Home</a>
+        <div>
+        </div>
+      </div>
 
-    <p>This guide provides a detailed step-by-step process for setting up Kali Linux using Oracle VirtualBox on your existing operating system. This is ideal for running Kali safely without altering your computer's actual operating system.</p>
+      <!-- Navbar on small screens -->
+      <div id="navDemo" class="w3-bar-block  w3-hide w3-hide-large w3-hide-medium w3-large">
+      </div>
+    </div>
+  </header>
+<body class="w3-light-grey">
 
-    <h2>Requirements</h2>
-    <ul>
-        <li><strong>Oracle VirtualBox:</strong> Download and install from <a href="https://www.virtualbox.org/">https://www.virtualbox.org/</a>.</li>
-        <li><strong>Kali Linux ISO file:</strong> Download from <a href="https://www.kali.org/get-kali/">https://www.kali.org/get-kali/</a>.</li>
-        <li><strong>Minimum of 4GB of RAM (8GB recommended)</strong> for the virtual machine.</li>
-        <li><strong>20-50 GB of free disk space</strong> on your host machine for the virtual disk.</li>
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1400px">
+
+<!-- Header -->
+<header class="w3-container w3-center w3-padding-32"> 
+  <h1><b>Michael Ricci</b></h1>
+  <p>Welcome! See what I have been up to by visiting my social pages. Or take a look around for some of my write ups!<span class="w3-tag"></span></p>
+</header>
+
+<!-- Blog Container -->
+<div class="w3-row blog-container">
+
+  <!-- Blog entry 1 -->
+  <div class="w3-card-4 w3-margin w3-white blog-box">
+    <img src="Wiresharklogo.png" alt="Blog Image 1">
+    <div>
+      <h3><b><a href="Wireshark.html">Using Wireshark for a CTF</a></b></h3>
+      <p>In this write up I go over how you can use a tool like Wireshark to find a password being transmitted over a network.</p>
+    </div>
+  </div>
+  
+  <!-- Blog entry 2 -->
+  <div class="w3-card-4 w3-margin w3-white blog-box">
+    <img src="RSS feed logo.jpg" alt="Feeder logo">
+    <div>
+      <h3><b><a href="rssfeed.html">How to set up RSS feed</a></b></h3>
+      <p>We will go over how to set up a RSS feed so you can stay up to date on all things in the cyber and tech world!</p>
+    </div>
+  </div>
+  
+  <!-- Blog entry 3 -->
+  <div class="w3-card-4 w3-margin w3-white blog-box">
+    <img src="kalilogo.jpg" alt="Kali logo">
+    <div>
+      <h3><b><a href="linux.html">How to install Kali linux</a></b></h3>
+      <p>Here we start our journey into Kali linux with a basic install guide. Keep an eye out for follow on write ups that will dive further into Kali linux.</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- Introduction menu -->
+<div class="w3-col l4">
+  <!-- About Card -->
+  <div class="w3-card w3-margin w3-margin-top">
+  <img src="Headshot.jpg" style="width:100%">
+    <div class="w3-container w3-white">
+      <h4><b>Michael Ricci</b></h4>
+      <p>Separating from the military in October, I will have honorably served 8 years in the United States Navy as an Intelligence Specialist. At the United States European Command, I served as a Counter Terrorism analyst conducting all source analysis building networks, products and briefing high level military personnel. In that position, I was selected to deploy with the Joint Special Operations Command where I was awarded the Joint Service Commendation medal. I also worked as a Counter Intelligence analyst, becoming the Counter Intelligence Team Lead of 15 analysts collaborating with NATO and other partner nations, as well as FBI, CIA, NSA and other federal agencies.</p> 
+    <br>
+       <p>Currently, I have over 3 years of experience as a Cyber Threat Intelligence analyst on a cyber protection team (CPT) and the Cyber Intelligence Division at Navy Cyber Defense Operations Command I served as division team lead of 9 analysts. In this role, I streamlined processes like, creating a Job Qualification Requirement procedure which fully qualified new analysts 50% faster than previous requirements. I am now beginning my transition out of the military and seeking employment in the Lansing or Grand Rapids, Michigan area.</p>
+    <br>
+       <p>I possess the CompTIA CySA+, and Security+ certifications and am completing my Bachelor of Science in Cybersecurity Technology, with a certificate in Cyber Threat Hunting from the University of Maryland Global Campus. I am expecting to graduate in July 2024. </p>
+    <br>
+       <p>I am passionate about learning new technologies and techniques to enhance my expertise and knowledge. My core competencies include threat analysis, CTI, threat assessment, security analytics, cyber defense and much more.</p>
+    <br>
+       <p>Please reach out for job inquiries or general conversation about cyber anytime.
+        Email: michaelricci95@gmail.com</p>
+    </div>
+  </div><hr>
+  
+  <!-- Posts -->
+  <div class="w3-card w3-margin">
+    <div class="w3-container w3-black w3-padding">
+        <h4>Recent Articles</h4>
+    </div>
+    <ul class="w3-ul w3-hoverable w3-white">
+        <li class="w3-padding-16">
+            <img src="Wiresharklogo.png" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+            <a href="Wireshark.html" class="w3-large link">Wireshark</a><br>
+            <a href="Wireshark.html">How to use Wireshark for network capture analysis.</a>
+        </li>
+        <li class="w3-padding-16">
+            <img src="RSS feed logo.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+            <a href="rssfeed.html" class="w3-large link">Feeder</a><br>
+            <a href="rssfeed.html">How to setup RSS Feeder.</a>
+        </li>
+        <li class="w3-padding-16">
+            <img src="/w3images/skies.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+            <a href="siemtool.html" class="w3-large link">Personal SIEM Tool</a><br>
+            <a href="siemtool.html">A tutorial on how to create a personal SIEM Tool (Coming Soon)</a>
+        </li>
+        <li class="w3-padding-16 w3-hide-medium w3-hide-small">
+            <img src="/w3images/rock.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+            <a href="website.html" class="w3-large link">Website Building</a><br>
+            <a href="website.html">How to Build a Website for your work. (Coming soon)</a>
+        </li>  
+        <li class="w3-padding-16 w3-hide-medium w3-hide-small">
+            <img src="kalilogo.JPG" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+            <a href="Kali_linux.html" class="w3-large link">Kali Linux</a><br>
+            <a href="Kali_linux.html">How to install Kali Linux</a>
+        </li>  
     </ul>
+  </div>
+  <hr> 
+ 
+  <!-- Labels / tags -->
+  <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding w3-black">
+      <h4>Tags</h4>
+    </div>
+    <div class="w3-container w3-white">
+    <p><span class="w3-tag w3-black w3-margin-bottom">Network Analysis</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Cyber Threat Hunting</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">CTI</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Incident Response</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">SOC</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Splunk</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">ArcSight</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Triage</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Cisco</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Microsoft</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">OpenVAS</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Metasploit</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Nessus</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">ACAS</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Jira</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Remedy</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">ServiceNow</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">NIST</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">RMF</span></p>
+    </div>
+  </div>
+  
+<!-- END Introduction Menu -->
+</div>
 
-    <h2>Installation Steps</h2>
-    <h3>Step 1: Install VirtualBox</h3>
-    <ul>
-        <li>Download and install VirtualBox on your host machine following the instructions on the VirtualBox website.</li>
-    </ul>
+<!-- END GRID -->
+</div><br>
 
-    <h3>Step 2: Set Up a New Virtual Machine</h3>
-    <ul>
-        <li>Open VirtualBox and create a new virtual machine named "Kali Linux" with type set to Linux and version set to Debian (64-bit).</li>
-        <li>Allocate at least 2048 MB of RAM.</li>
-        <li>Create a virtual hard disk using VDI (VirtualBox Disk Image), set to dynamically allocated with at least 20 GB.</li>
-    </ul>
+<!-- END w3-content -->
+</div>
 
-    <h3>Step 3: Configure the Virtual Machine</h3>
-    <ul>
-        <li>Under the system settings, set the boot order to start with the optical drive.</li>
-        <li>Increase the processor count to 2 for better performance if possible.</li>
-        <li>Mount the Kali Linux ISO file to the virtual optical drive under storage settings.</li>
-        <li>Set the network settings to NAT for internet access or as required for your setup.</li>
-    </ul>
+<!-- Footer -->
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+  <button class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom">Previous</button>
+  <button class="w3-button w3-black w3-padding-large w3-margin-bottom">Next</button>
+  <p>Thanks for visiting!</p>
+</footer>
 
-    <h3>Step 4: Install Kali Linux</h3>
-    <ul>
-        <li>Start the VM and select "Graphical Install" from the Kali menu.</li>
-        <li>Follow through the installation steps, setting up language, location, keyboard, network, user, disk partitions, and installing the GRUB bootloader.</li>
-    </ul>
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
 
-    <h3>Step 5: Finalize Installation</h3>
-    <ul>
-        <li>Restart the VM, ensuring the ISO is unmounted, to boot into your new Kali Linux installation.</li>
-    </ul>
-
-    <h3>Step 6: Post Installation</h3>
-    <ul>
-        <li>Install VirtualBox Guest Additions for enhanced functionality and performance.</li>
-    </ul>
-
-    <footer>
-        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-    </footer>
 </body>
 </html>
