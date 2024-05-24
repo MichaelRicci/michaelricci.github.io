@@ -48,6 +48,13 @@ body {
 .Iran {background-color: #04AA6D;} /* Green */
 .other {background-color: #e7e7e7; color: black;} /* Gray */
 
+.separator {
+  width: 80%;
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 300px); /* three columns */
@@ -121,7 +128,7 @@ body {
 
 <!-- Filter Labels -->
 <div>
-  <span class="label Chine" onclick="filterCards('China')">China</span>
+  <span class="label China" onclick="filterCards('China')">China</span>
   <span class="label Russia" onclick="filterCards('Russia')">Russia</span>
   <span class="label DPRK" onclick="filterCards('DPRK')">DPRK</span>
   <span class="label Iran" onclick="filterCards('Iran')">Iran</span>
@@ -129,6 +136,9 @@ body {
   <span class="label" onclick="filterCards('all')" style="background-color: #000;">Show All</span>
 </div>
 
+<!-- Separator Line -->
+<div class="separator"></div>
+  
 <!-- Grid Container for Flip Cards -->
 <div class="grid-container">
   <div class="flip-card Russia">
