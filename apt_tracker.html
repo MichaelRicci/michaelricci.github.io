@@ -1,8 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+<title>MikeWebsite</title>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+.container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.leftcolumn {
+  flex: 70%;
+  padding: 20px;
+}
+.rightcolumn {
+  flex: 30%;
+  padding: 20px;
+}
+.blog-box {
+  background-color: white;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.blog-box img {
+  width: 25%;
+  height: auto;
+}
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+</style>
+</head>
+<header style="position: relative;">
+    <div class="w3-top" class="header" id="home">
+      <div class="w3-bar  w3-card w3-left-align w3-large heeder-large-screen" style="background-color: #000015;" >
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-small w3-hover-black w3-large " href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <a href="index.html" class="w3-bar-item w3-button w3-padding-small  w3-hover-black">Home</a>
+        <a href="apt_tracker.html" class="w3-bar-item w3-button w3-padding-small  w3-hover-black">APT Tracker</a>
+        <div>
+        </div>
+      </div>
+
+      <!-- Navbar on small screens -->
+      <div id="navDemo" class="w3-bar-block  w3-hide w3-hide-large w3-hide-medium w3-large">
+      </div>
+    </div>
+</header>
+<body class="w3-light-grey">
+
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1400px">
+
 <title>Flip Card Gallery</title>
 <link rel="stylesheet" href="style.css">
 <style>
