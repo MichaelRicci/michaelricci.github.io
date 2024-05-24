@@ -10,17 +10,34 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
-.blog-container {
+.container {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
 }
+.leftcolumn {
+  flex: 70%;
+  padding: 20px;
+}
+.rightcolumn {
+  flex: 30%;
+  padding: 20px;
+}
 .blog-box {
-  width: 30%;
+  background-color: white;
   margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 .blog-box img {
   width: 100%;
+  height: auto;
+}
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
 }
 </style>
 </head>
@@ -37,7 +54,7 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
       <div id="navDemo" class="w3-bar-block  w3-hide w3-hide-large w3-hide-medium w3-large">
       </div>
     </div>
-  </header>
+</header>
 <body class="w3-light-grey">
 
 <!-- w3-content defines a container for fixed size centered content, 
@@ -50,121 +67,105 @@ and is wrapped around the whole page content, except for the footer in this exam
   <p>Welcome! See what I have been up to by visiting my social pages. Or take a look around for some of my write ups!<span class="w3-tag"></span></p>
 </header>
 
-<!-- Blog Container -->
-<div class="row">
+<!-- Container -->
+<div class="container">
+  <!-- Left Column -->
   <div class="leftcolumn">
-    <div class="card">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Dec 7, 2017</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    <div class="blog-box">
+      <img src="Wiresharklogo.png" alt="Blog Image 1">
+      <div>
+        <h3><b><a href="Wireshark.html">Using Wireshark for a CTF</a></b></h3>
+        <p>In this write up I go over how you can use a tool like Wireshark to find a password being transmitted over a network.</p>
+      </div>
     </div>
-    <div class="card">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Sep 2, 2017</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    <div class="blog-box">
+      <img src="RSS feed logo.jpg" alt="Feeder logo">
+      <div>
+        <h3><b><a href="rssfeed.html">How to set up RSS feed</a></b></h3>
+        <p>We will go over how to set up a RSS feed so you can stay up to date on all things in the cyber and tech world!</p>
+      </div>
+    </div>
+    <div class="blog-box">
+      <img src="kalilogo.jpg" alt="Kali logo">
+      <div>
+        <h3><b><a href="linux.html">How to install Kali linux</a></b></h3>
+        <p>Here we start our journey into Kali linux with a basic install guide. Keep an eye out for follow on write ups that will dive further into Kali linux.</p>
+      </div>
     </div>
   </div>
-<!-- Introduction menu -->
-<div class="rightcolumn">
-  <!-- About Card -->
-  <div class="w3-card w3-margin w3-margin-top">
-  <img src="Headshot.jpg" style="width:100%">
-    <div class="w3-container w3-white">
-      <h4><b>Michael Ricci</b></h4>
-      <p>Separating from the military in October, I will have honorably served 8 years in the United States Navy as an Intelligence Specialist. At the United States European Command, I served as a Counter Terrorism analyst conducting all source analysis building networks, products and briefing high level military personnel. In that position, I was selected to deploy with the Joint Special Operations Command where I was awarded the Joint Service Commendation medal. I also worked as a Counter Intelligence analyst, becoming the Counter Intelligence Team Lead of 15 analysts collaborating with NATO and other partner nations, as well as FBI, CIA, NSA and other federal agencies.</p> 
-    <br>
-       <p>Currently, I have over 3 years of experience as a Cyber Threat Intelligence analyst on a cyber protection team (CPT) and the Cyber Intelligence Division at Navy Cyber Defense Operations Command I served as division team lead of 9 analysts. In this role, I streamlined processes like, creating a Job Qualification Requirement procedure which fully qualified new analysts 50% faster than previous requirements. I am now beginning my transition out of the military and seeking employment in the Lansing or Grand Rapids, Michigan area.</p>
-    <br>
-       <p>I possess the CompTIA CySA+, and Security+ certifications and am completing my Bachelor of Science in Cybersecurity Technology, with a certificate in Cyber Threat Hunting from the University of Maryland Global Campus. I am expecting to graduate in July 2024. </p>
-    <br>
-       <p>I am passionate about learning new technologies and techniques to enhance my expertise and knowledge. My core competencies include threat analysis, CTI, threat assessment, security analytics, cyber defense and much more.</p>
-    <br>
-       <p>Please reach out for job inquiries or general conversation about cyber anytime.
+
+  <!-- Right Column -->
+  <div class="rightcolumn">
+    <!-- About Card -->
+    <div class="card">
+      <img src="Headshot.jpg" style="width:100%">
+      <div class="w3-container w3-white">
+        <h4><b>Michael Ricci</b></h4>
+        <p>Separating from the military in October, I will have honorably served 8 years in the United States Navy as an Intelligence Specialist. At the United States European Command, I served as a Counter Terrorism analyst conducting all source analysis building networks, products and briefing high level military personnel. In that position, I was selected to deploy with the Joint Special Operations Command where I was awarded the Joint Service Commendation medal. I also worked as a Counter Intelligence analyst, becoming the Counter Intelligence Team Lead of 15 analysts collaborating with NATO and other partner nations, as well as FBI, CIA, NSA and other federal agencies.</p> 
+        <br>
+        <p>Currently, I have over 3 years of experience as a Cyber Threat Intelligence analyst on a cyber protection team (CPT) and the Cyber Intelligence Division at Navy Cyber Defense Operations Command I served as division team lead of 9 analysts. In this role, I streamlined processes like, creating a Job Qualification Requirement procedure which fully qualified new analysts 50% faster than previous requirements. I am now beginning my transition out of the military and seeking employment in the Lansing or Grand Rapids, Michigan area.</p>
+        <br>
+        <p>I possess the CompTIA CySA+, and Security+ certifications and am completing my Bachelor of Science in Cybersecurity Technology, with a certificate in Cyber Threat Hunting from the University of Maryland Global Campus. I am expecting to graduate in July 2024. </p>
+        <br>
+        <p>I am passionate about learning new technologies and techniques to enhance my expertise and knowledge. My core competencies include threat analysis, CTI, threat assessment, security analytics, cyber defense and much more.</p>
+        <br>
+        <p>Please reach out for job inquiries or general conversation about cyber anytime.
         Email: michaelricci95@gmail.com</p>
+      </div>
     </div>
-  </div><hr>
+    
+    <!-- Posts -->
+    <div class="w3-card w3-margin">
+      <div class="w3-container w3-black w3-padding">
+          <h4>Recent Articles</h4>
+      </div>
+      <ul class="w3-ul w3-hoverable w3-white">
+          <li class="w3-padding-16">
+              <img src="Wiresharklogo.png" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+              <a href="Wireshark.html" class="w3-large link">Wireshark</a><br>
+              <a href="Wireshark.html">How to use Wireshark for network capture analysis.</a>
+          </li>
+          <li class="w3-padding-16">
+              <img src="RSS feed logo.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+              <a href="rssfeed.html" class="w3-large link">Feeder</a><br>
+              <a href="rssfeed.html">How to setup RSS Feeder.</a>
+          </li>
+          <li class="w3-padding-16">
+              <img src="/w3images/skies.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+              <a href="siemtool.html" class="w3-large link">Personal SIEM Tool</a><br>
+              <a href="siemtool.html">A tutorial on how to create a personal SIEM Tool (Coming Soon)</a>
+          </li>
+          <li class="w3-padding-16 w3-hide-medium w3-hide-small">
+              <img src="/w3images/rock.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+              <a href="website.html" class="w3-large link">Website Building</a><br>
+              <a href="website.html">How to Build a Website for your work. (Coming soon)</a>
+          </li>  
+          <li class="w3-padding-16 w3-hide-medium w3-hide-small">
+              <img src="kalilogo.JPG" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+              <a href="Kali_linux.html" class="w3-large link">Kali Linux</a><br>
+              <a href="Kali_linux.html">How to install Kali Linux</a>
+          </li>  
+      </ul>
+    </div>
+    <hr> 
   
-  <!-- Posts -->
-  <div class="w3-card w3-margin">
-    <div class="w3-container w3-black w3-padding">
-        <h4>Recent Articles</h4>
+    <!-- Labels / tags -->
+    <div class="w3-card w3-margin">
+      <div class="w3-container w3-padding w3-black">
+        <h4>Tags</h4>
+      </div>
+      <div class="w3-container w3-white">
+        <p><span class="w3-tag w3-black w3-margin-bottom">Tech</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Wireshark</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Feeder</span>
+          <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Security</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">RSS</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Kali Linux</span>
+          <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Coding</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Cyber</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Threat Hunting</span>
+          <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">SIEM</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Network</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Analysis</span>
+          <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">CTI</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Cyber Defense</span>
+        </p>
+      </div>
     </div>
-    <ul class="w3-ul w3-hoverable w3-white">
-        <li class="w3-padding-16">
-            <img src="Wiresharklogo.png" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-            <a href="Wireshark.html" class="w3-large link">Wireshark</a><br>
-            <a href="Wireshark.html">How to use Wireshark for network capture analysis.</a>
-        </li>
-        <li class="w3-padding-16">
-            <img src="RSS feed logo.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-            <a href="rssfeed.html" class="w3-large link">Feeder</a><br>
-            <a href="rssfeed.html">How to setup RSS Feeder.</a>
-        </li>
-        <li class="w3-padding-16">
-            <img src="/w3images/skies.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-            <a href="siemtool.html" class="w3-large link">Personal SIEM Tool</a><br>
-            <a href="siemtool.html">A tutorial on how to create a personal SIEM Tool (Coming Soon)</a>
-        </li>
-        <li class="w3-padding-16 w3-hide-medium w3-hide-small">
-            <img src="/w3images/rock.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-            <a href="website.html" class="w3-large link">Website Building</a><br>
-            <a href="website.html">How to Build a Website for your work. (Coming soon)</a>
-        </li>  
-        <li class="w3-padding-16 w3-hide-medium w3-hide-small">
-            <img src="kalilogo.JPG" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-            <a href="Kali_linux.html" class="w3-large link">Kali Linux</a><br>
-            <a href="Kali_linux.html">How to install Kali Linux</a>
-        </li>  
-    </ul>
-</div>
-<hr>
-
-  <!-- Labels / tags -->
-  <div class="w3-card w3-margin">
-    <div class="w3-container w3-black w3-padding">
-      <h4>Skills</h4>
-    </div>
-    <div class="w3-container w3-white">
-    <p><span class="w3-tag w3-black w3-margin-bottom">Network Analysis</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Cyber Threat Hunting</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">CTI</span>
-      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Incident Response</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">SOC</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Splunk</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">ArcSight</span>
-      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Triage</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Cisco</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Microsoft</span>
-      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">OpenVAS</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Metasploit</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Nessus</span>
-      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">ACAS</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Jira</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Remedy</span>
-      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">ServiceNow</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">NIST</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">RMF</span></p>
-    </div>
-  </div>
-  
-<!-- END Introduction Menu -->
-</div>
-
-<!-- END GRID -->
-</div><br>
-
-<!-- END w3-content -->
-</div>
-
-<!-- Footer -->
-<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
-  <button class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom">Previous</button>
-  <button class="w3-button w3-black w3-padding-large w3-margin-bottom">Next</button>
-  <p>Thanks for visiting!</p>
-</footer>
-
-<script>
-// Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else {
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-</script>
+    
+  </div> <!-- End Right Column -->
+</div> <!-- End Container -->
 
 </body>
 </html>
