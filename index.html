@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <title>MikeWebsite</title>
 <meta charset="UTF-8">
@@ -31,7 +31,7 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 .blog-box img {
-  width: 25%;
+  width: 50%;
   height: auto;
 }
 .card {
@@ -39,83 +39,218 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   padding: 20px;
   margin-top: 20px;
 }
+
+.header {
+  width: 100%;
+  height: 300px; /* Adjust the height as needed */
+  background-image: 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  background-color: #1a58bc;
+  text-align: center;
+}
+
+.header h1, .header p {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(26, 88, 188, 0); /* Semi-transparent overlay */
+  z-index: 1;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 80px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Navbar */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+}
+
+/* Real image, replacing fake image */
+.realimg {
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+.fa-github {
+    background: #575656;
+    color: white;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
 </style>
 </head>
-<header style="position: relative;">
-    <div class="w3-top" class="header" id="home">
-      <div class="w3-bar  w3-card w3-left-align w3-large heeder-large-screen" style="background-color: #000015;" >
-        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-small w3-hover-black w3-large " href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-        <a href="index.html" class="w3-bar-item w3-button w3-padding-small  w3-hover-black">Home</a>
-        <a href="apt_tracker.html" class="w3-bar-item w3-button w3-padding-small  w3-hover-black">APT Tracker</a>
+<body class="w3-light-grey">
+
+<!-- Header -->
+<div class="header">
+    <h1>Welcome to my Website!</h1>
+    <p>Look around for recent articles I have written or head over to my github to see code I have been working on.</p>
+</div>
+
+<!-- Navbar -->
+<div class="navbar">
+  <a href="/index/index.html" class="active">Home</a>
+  <a href="/APT tracker/apt_tracker.html">APT Tracker</a>
+  <a href="https://github.com/MichaelRicci">Github</a>
+  <a href="#" class="All Posts">Link</a>
+</div>
+
+<!-- Container -->
+<div class="w3-content" style="max-width:1400px">
+  <div class="row">
+    <!-- Left Column -->
+    <div class="leftcolumn">
+      <div class="blog-box">
+        <img src="Wirehshark blog logo.png" alt="Blog Image 1">
         <div>
+          <h7><b><a href="/Wireshark writeups/Wireshark.html">Using Wireshark for a CTF</a></b></h7>
+          <p>In this write up I go over how you can use a tool like Wireshark to find a password being transmitted over a network.</p>
+        </div>
+      </div>
+      <div class="blog-box">
+        <img src="RSS feed logo.jpg" alt="Feeder logo">
+        <div>
+          <h7><b><a href="/RSS feed write up/rssfeed.html">How to set up RSS feed</a></b></h7>
+          <p>We will go over how to set up a RSS feed so you can stay up to date on all things in the cyber and tech world!</p>
+        </div>
+      </div>
+      <div class="blog-box">
+        <img src="Kali linux logo.png" alt="Kali logo">
+        <div>
+          <h7><b><a href="/Kali linux/Kali_linux.html">How to install Kali linux</a></b></h7>
+          <p>Here we start our journey into Kali linux with a basic install guide. Keep an eye out for follow on write ups that will dive further into Kali linux.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column -->
+    <div class="rightcolumn">
+      <!-- About Card -->
+      <div class="card">
+        <img src="Headshot.jpg" style="width:100%">
+        <div class="w3-container w3-white">
+          <h4><b>Michael Ricci</b></h4>
+          <p>Separating from the military in October, I will have honorably served 8 years in the United States Navy as an Intelligence Specialist. At the United States European Command, I served as a Counter Terrorism analyst conducting all source analysis building networks, products and briefing high level military personnel. In that position, I was selected to deploy with the Joint Special Operations Command where I was awarded the Joint Service Commendation medal. I also worked as a Counter Intelligence analyst, becoming the Counter Intelligence Team Lead of 15 analysts collaborating with NATO and other partner nations, as well as FBI, CIA, NSA and other federal agencies.</p> 
+          <br>
+          <p>Recently, I have over 3 years of experience as a Cyber Threat Intelligence analyst on a cyber protection team (CPT) and the Cyber Intelligence Division at Navy Cyber Defense Operations Command where I served as division team lead of 9 analysts. In this role, I streamlined processes like, creating a Job Qualification Requirement procedure which fully qualified new analysts 50% faster than previous requirements. </p>
+          <br>
+          <p>Currently, I am interning at DefendEdge. As a Tier 1 SOC analyst, I will bolster 24/7/365 monitoring, management, and support across the globe with real-time threat detection & response to zero-day attacks and vulnerabilities. As a member of the CTI team, I engage in global operations through our proprietary iDNA platform in discovering, identifying, evaluating, and reporting on bad actors, impersonations, compromises, and other risk activities to our clients and homeland.</p>
+          <br>
+          <p>I possess the CompTIA CySA+, and Security+ certifications and am completing my Bachelor of Science in Cybersecurity Technology, with a certificate in Cyber Threat Hunting from the University of Maryland Global Campus. I am expecting to graduate in July 2024. I am passionate about learning new technologies and techniques to enhance my expertise and knowledge. My core competencies include threat analysis, CTI, threat hunting, risk assessment, network security, penetration testing, vulnerability management, and incident response.</p>
         </div>
       </div>
 
-      <!-- Navbar on small screens -->
-      <div id="navDemo" class="w3-bar-block  w3-hide w3-hide-large w3-hide-medium w3-large">
-      </div>
-    </div>
-</header>
-<body class="w3-light-grey">
-
-<!-- w3-content defines a container for fixed size centered content, 
-and is wrapped around the whole page content, except for the footer in this example -->
-<div class="w3-content" style="max-width:1400px">
-
-<!-- Header -->
-<header class="w3-container w3-center w3-padding-32"> 
-  <h1><b>Michael Ricci</b></h1>
-  <p>Welcome! See what I have been up to by visiting my social pages. Or take a look around for some of my write ups!<span class="w3-tag"></span></p>
-</header>
-
-<!-- Container -->
-<div class="container">
-  <!-- Left Column -->
-  <div class="leftcolumn">
-    <div class="blog-box">
-      <img src="Wirehshark blog logo.png" alt="Blog Image 1">
-      <div>
-        <h7><b><a href="Wireshark.html">Using Wireshark for a CTF</a></b></h7>
-        <p>In this write up I go over how you can use a tool like Wireshark to find a password being transmitted over a network.</p>
-      </div>
-    </div>
-    <div class="blog-box">
-      <img src="RSS feed logo.jpg" alt="Feeder logo">
-      <div>
-        <h7><b><a href="rssfeed.html">How to set up RSS feed</a></b></h7>
-        <p>We will go over how to set up a RSS feed so you can stay up to date on all things in the cyber and tech world!</p>
-      </div>
-    </div>
-    <div class="blog-box">
-      <img src="Kali linux logo.png" alt="Kali logo">
-      <div>
-        <h7><b><a href="linux.html">How to install Kali linux</a></b></h7>
-        <p>Here we start our journey into Kali linux with a basic install guide. Keep an eye out for follow on write ups that will dive further into Kali linux.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Right Column -->
-  <div class="rightcolumn">
-    <!-- About Card -->
-    <div class="card">
-      <img src="Headshot.jpg" style="width:100%">
-      <div class="w3-container w3-white">
-        <h4><b>Michael Ricci</b></h4>
-        <p>Separating from the military in October, I will have honorably served 8 years in the United States Navy as an Intelligence Specialist. At the United States European Command, I served as a Counter Terrorism analyst conducting all source analysis building networks, products and briefing high level military personnel. In that position, I was selected to deploy with the Joint Special Operations Command where I was awarded the Joint Service Commendation medal. I also worked as a Counter Intelligence analyst, becoming the Counter Intelligence Team Lead of 15 analysts collaborating with NATO and other partner nations, as well as FBI, CIA, NSA and other federal agencies.</p> 
-        <br>
-        <p>Currently, I have over 3 years of experience as a Cyber Threat Intelligence analyst on a cyber protection team (CPT) and the Cyber Intelligence Division at Navy Cyber Defense Operations Command I served as division team lead of 9 analysts. In this role, I streamlined processes like, creating a Job Qualification Requirement procedure which fully qualified new analysts 50% faster than previous requirements. I am now beginning my transition out of the military and seeking employment in the Lansing or Grand Rapids, Michigan area.</p>
-        <br>
-        <p>I possess the CompTIA CySA+, and Security+ certifications and am completing my Bachelor of Science in Cybersecurity Technology, with a certificate in Cyber Threat Hunting from the University of Maryland Global Campus. I am expecting to graduate in July 2024. </p>
-        <br>
-        <p>I am passionate about learning new technologies and techniques to enhance my expertise and knowledge. My core competencies include threat analysis, CTI, threat assessment, security analytics, cyber defense and much more.</p>
-        <br>
-        <p>Please reach out for job inquiries or general conversation about cyber anytime.
-        Email: michaelricci95@gmail.com</p>
-      </div>
-    </div>
-    
-    <!-- Posts -->
+       <!-- Posts -->
     <div class="w3-card w3-margin">
       <div class="w3-container w3-black w3-padding">
           <h4>Recent Articles</h4>
@@ -130,11 +265,6 @@ and is wrapped around the whole page content, except for the footer in this exam
               <img src="RSS feed logo.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
               <a href="rssfeed.html" class="w3-large link">Feeder</a><br>
               <a href="rssfeed.html">How to setup RSS Feeder.</a>
-          </li>
-          <li class="w3-padding-16">
-              <img src="/w3images/skies.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-              <a href="siemtool.html" class="w3-large link">Personal SIEM Tool</a><br>
-              <a href="siemtool.html">A tutorial on how to create a personal SIEM Tool (Coming Soon)</a>
           </li>
           <li class="w3-padding-16 w3-hide-medium w3-hide-small">
               <img src="/w3images/rock.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
@@ -168,27 +298,23 @@ and is wrapped around the whole page content, except for the footer in this exam
   </div> <!-- End Right Column -->
 </div> <!-- End Container -->
 
-</body>
-  <!-- Footer -->
-<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
-<style>
-    .fa-linkedin {
-        background: #007bb5;
-        color: white;
-      } 
-
-      .fa-github {
-        background: #575656;
-        color: white;
-      }
-    </style>
-
-    <!-- Add font awesome icons -->
-<a href="https://www.linkedin.com/in/michael-ricci-456003282" class="fa fa-linkedin"></a>
-<a href="https://github.com/MichaelRicci" class="fa fa-github"></a>
+<!-- Footer -->
+<footer class="footer w3-container w3-padding-32 w3-margin-top">
+  <a href="https://www.linkedin.com/in/michael-ricci-456003282" class="fa fa-linkedin"></a>
+  <a href="https://github.com/MichaelRicci" class="fa fa-github"></a>
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 </footer>
 
+<script>
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
 </body>
-</html>
 </html>
