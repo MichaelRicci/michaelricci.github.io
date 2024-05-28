@@ -10,83 +10,105 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
-
 .w3-card-4 {
-        background-color: #3d3d3d; /* Adjust the background color as needed */
-        color: #ffffff;
-        margin: 20px;
-        padding: 20px;
-        text-align: center; /* Centers text */
-    }
-    img {
-        max-width: 100%; /* Ensures images do not exceed the container width */
-        height: auto; /* Maintains aspect ratio */
-    }
-    body {
-        font-family: Arial, sans-serif; /* Sets the default font for the page */
-    }
-
-        .w3-content {
-            max-width: 1400px;
-            margin: auto; /* Centers the container */
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-        }
-        h1, h2 {
-            color: #ffffff;
-        }
-        p {
-            font-size: 16px;
-            color: #ffffff;
-        }
-        ol {
-            margin: 20px;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-
-        ul, ol {
-            list-style-type: none; /* Removes bullets or numbers */
-            padding-left: 0; /* Removes default padding */
-        }
-
+    background-color: #3d3d3d; /* Adjust the background color as needed */
+    color: #ffffff;
+    margin: 20px;
+    padding: 20px;
+    text-align: left; /* Aligns text to the left */
+}
+img {
+    max-width: 100%; /* Ensures images do not exceed the container width */
+    height: auto; /* Maintains aspect ratio */
+}
+body {
+    font-family: Arial, sans-serif; /* Sets the default font for the page */
+}
+.w3-content {
+    max-width: 1400px;
+    margin: auto; /* Centers the container */
+    box-sizing: border-box;
+}
+p, li {
+    margin: 10px 0;
+}
+.section {
+    margin-bottom: 20px;
+}
+.sub-section {
+    margin-left: 20px;
+}
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+.header {
+    padding: 80px;
+    text-align: center;
+    background: #1a58bc;
+    color: white;
+}
+.header h1 {
+    font-size: 40px;
+}
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+}
+.navbar a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.navbar a.active {
+    background-color: #666;
+    color: white;
+}
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+.fa-github {
+    background: #575656;
+    color: white;
+}
 </style>
 </head>
-<header style="position: relative;">
-
-    <div class="w3-top" class="header" id="home">
-      <div class="w3-bar  w3-card w3-left-align w3-large heeder-large-screen" style="background-color: #000015;" >
-        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-small w3-hover-black w3-large " href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-        <a href="index.html" class="w3-bar-item w3-button w3-padding-small  w3-hover-black">Home</a>
-        <div >
-        </div>
-    
-      </div>
-
-      <!-- Navbar on small screens -->
-      <div id="navDemo" class="w3-bar-block  w3-hide w3-hide-large w3-hide-medium w3-large">
-      </div>
-    </div>
-  </header>
 <body class="w3-light-grey">
 
-<!-- w3-content defines a container for fixed size centered content, 
-and is wrapped around the whole page content, except for the footer in this example -->
-<div class="w3-content" style="max-width:1400px">
-
 <!-- Header -->
-<header class="w3-container w3-center w3-padding-32"> 
+<header class="header">
+  <h1>Mike's Website</h1>
+  <p> Take a look below at how easy it is to set up an RSS feeder to help you stay up to date on all things Cyber!</p>
 </header>
 
-<!-- Grid -->
-<div class="w3-row">
+<!-- Navbar -->
+<div class="navbar">
+  <a href="/index/index.html" class="active">Home</a>
+  <a href="/APT tracker/apt_tracker.html">APT Tracker</a>
+  <a href="https://github.com/MichaelRicci">Github</a>
+</div>
 
-<!-- Blog entries -->
+<!-- Main content -->
+<div class="w3-content" style="max-width:1400px; margin-top:20px">
+  <!-- Blog entries -->
   <!-- Blog entry -->
   <div class="w3-card-4 w3-margin w3-dark-grey" style="max-width: 1400px;">
     <body>
@@ -146,39 +168,23 @@ and is wrapped around the whole page content, except for the footer in this exam
 <!-- END BLOG ENTRIES -->
 </div>
 
-<!-- Introduction menu -->
-  <!-- Posts -->
- 
-  <!-- Labels / tags -->
-  
-<!-- END Introduction Menu -->
-</div>
-
-<!-- END GRID -->
-</div><br>
-
-<!-- END w3-content -->
-</div>
-
 <!-- Footer -->
-<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
-<style>
-    .fa-linkedin {
-        background: #007bb5;
-        color: white;
-      } 
-
-      .fa-github {
-        background: #575656;
-        color: white;
-      }
-    </style>
-
-    <!-- Add font awesome icons -->
-<a href="https://www.linkedin.com/in/michael-ricci-456003282" class="fa fa-linkedin"></a>
-<a href="https://github.com/MichaelRicci" class="fa fa-github"></a>
+<footer class="footer w3-container w3-padding-32 w3-margin-top">
+  <a href="https://www.linkedin.com/in/michael-ricci-456003282" class="fa fa-linkedin"></a>
+  <a href="https://github.com/MichaelRicci" class="fa fa-github"></a>
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 </footer>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
 
 </body>
 </html>
