@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MikeWebsite</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  background: url('/index/white_abstract_low_poly_background.jpg') no-repeat center center;
+  background-size: cover;
+  opacity: 0.9; /* Adjust the opacity for subtleness */
+}
+
+    h1,h2,h3,h4,h5 {
+      font-family: "Raleway", sans-serif;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .header {
+      position: relative;
+      padding: 0;
+      margin: 0;
+      height: 250px; /* Adjust height as needed */
+      overflow: hidden;
+    }
+    .header video, .header img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -1; /* Keeps the video behind the content */
+    }
+    .header h1, .header p {
+      position: relative;
+      z-index: 1;
+      color: white;
+      text-align: center;
+      padding: 5px;
+    }
+
+.w3-content {
+    max-width: 1400px;
+    margin: auto; /* Centers the container */
+    box-sizing: border-box;
+}
+p, li {
+    margin: 10px 0;
+}
+.section {
+    margin-bottom: 20px;
+}
+.sub-section {
+    margin-left: 20px;
+}
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+}
+.navbar a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+.navbar a:hover {
+    background-color: #ddd;
+    color: rgb(255, 255, 255);
+}
+.navbar a.active {
+    background-color: #666;
+    color: white;
+}
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: rgb(17, 0, 255);
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+.fa-github {
+    background: #575656;
+    color: white;
+}
+</style>
+</head>
+<body class="w3-light-grey">
+
+<!-- Header -->
+<div class="header">
+  <video playsinline autoplay muted loop id="myVideo">
+    <source src="/index/bluenetwork.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+  <!-- You can replace the video with an image by uncommenting the following line and providing the path to your image -->
+  <!-- <img src="path_to_your_image.jpg" alt="Header Image" style="width:100%; height:auto;"> -->
+</div>
+
+<!-- Navbar -->
+<div class="navbar">
+    <a href="/index/index.html" class="active">Home</a>
+    <a href="/APT tracker/apt_tracker.html">APT Tracker</a>
+    <a href="https://github.com/MichaelRicci">Github</a>
+    <div class="dropdown">
+      <button class="dropbtn">All Articles
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="/Kali linux/Kali_linux.html">Kali Linux Guide</a>
+        <a href="/Website building/website.html">How to host a Website</a>
+        <a href="/Wireshark writeups/Wireshark.html">Wireshark CTF</a>
+        <a href="/FLowcharts/flowcharts.html">How to build Flowcharts with Mermaid</a>
+        <a href="/RSS feed write up/rssfeed.html">How to setup RSS feeds</a>
+      </div>
+    </div>
+  </div>
+  
+<!-- Main content -->
+<div class="w3-content" style="max-width:1400px; margin-top:20px">
+  <!-- Blog entries -->
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-dark-grey" style="max-width: 1400px;">
+    <h1>How To: Flowcharts</h1>
+    <p>There are many reasons to create flowcharts as a cybersecurity professional. The chief reason is to showcase the path of a vulnerability. In this guide we talk about and show how to quickly create a flowchart with icons to add a more professional presentation.</p>
+    <h2>Requirements</h2>
+    <p>To start there are a few things you need to know. Flowcharts have their own code known as Mermaid. Luckily you don’t need to be an expert in mermaid code to create these flowcharts. To bridge the gap in knowledge of code and performance we will be using a few different free software’s to help us. First and foremost is ChatGPT as the AI will write your code, so you don’t have to learn it. We’ll get into the prompts to enter soon. For now, let’s look at possible options of where to put your code.</p>
+    <ol>
+        <li><strong>Visual Source Code (VSC)</strong>
+            <ul>
+                <li>VSC has an extension that allows for the preview of mermaid code. The best part of using VSC is that you can also incorporate things like font-awesome icons (more on that later). All you need to do is head over to VSC and download the applicable version. Once you have it, head over to the extensions portion and download Markdown Preview Mermaid Support to be able to preview your chart in real time.</li>
+            </ul>
+        </li>
+        <img src="/FLowcharts/VSC1.png" alt="VSC">
+        <li><strong>Mermaid Live Editor</strong>
+            <ul>
+                <li>Mermaid Live Editor is a free site hosted on GitHub to use enter your code directly and view the output in real time. This site makes it very convenient to use and edit your code as you do not have to download any software or extensions. But the catch is you will not be able to use font-awesome icons or other HTML language icons. Good news is if you word it right, ChatGPT will make sure you still have icons. Also, there are sample diagrams that allow you to simply edit the text within it to tailor it to your needs.</li>
+            </ul>
+        </li>
+        <img src="/FLowcharts/mermaidliveeditor.png" alt="VSC">
+        <li><strong>Flowchart.io</strong>
+            <ul>
+                <li>This is another online site that is free to use. It can be very persistent in getting you to sync an account to it, however this can be avoided if you have a few minutes to go through the prompts. Flowchart.io, formerly known as draw.io, is a bit unique compared to the others in that you don’t need to know mermaid code at all. You get to put what you want where you want it. It offers a wide range of features to create flowcharts, diagrams and other visual representations. The downside to this is that it is very time-consuming. Everything from size to spacing needs to be adjusted when using this. But if you have the time it can make for a very nice flowchart. There is also the option to input mermaid code written by yourself or ChatGPT however, it is very buggy when coming from Chat.</li>
+            </ul>
+        </li>
+        <img src="/FLowcharts/flow.io.png" alt="VSC">
+    </ol>
+    <h2>Example Workflow</h2>
+    <p>Find a CVE<br>
+    For this example, we will use CVE-2024-21413 a Microsoft Outlook RCE.</p>
+    <img src="/FLowcharts/cve.png" alt="VSC">
+    <p>Next, do research and confirm what the vulnerability is. Once you do that head over to ChatGPT and craft a definition based on your findings. “Create me a flowchart of CVE-2024-21413. It is a Microsoft outlook vulnerability that allows for RCE.” If you agree with the steps it gave back to you, have it put that flowchart into mermaid code and specify which tool you are using so it is compatible with it.</p>
+    <p>Once you have the code it gives you select the “Copy code” in the top right corner.</p>
+    <img src="/FLowcharts/chatgpt.png" alt="VSC">
+    <p>Paste that code into VSC in a file named the CVE.md (ex. CVE-2024-21413.md). Once the code is in, use the publish icon to view the flowchart.</p>
+    <img src="/FLowcharts/VSC2.png" alt="VSC">
+    <p>Use ChatGPT to edit the code to get your desired look. As you work with it more you will understand how to do more with it like in the image below.</p>
+    <img src="/FLowcharts/VSC3.png" alt="VSC">
+    <h2>Conclusion</h2>
+    <p>Creating flowcharts is an essential skill for cybersecurity professionals to illustrate vulnerability pathways clearly and effectively. This guide has demonstrated how to use various free tools to quickly create professional flowcharts with icons, enhancing visual appeal and clarity. By leveraging AI like ChatGPT to generate Mermaid code, you can simplify the process and focus on content rather than syntax. Tools like Visual Studio Code (VSC), Mermaid Live Editor, and Flowchart.io each offer unique advantages, from real-time previews and icon integration to drag-and-drop interfaces, catering to different needs and levels of detail. By understanding and utilizing these tools, you can communicate complex cybersecurity concepts more effectively, making your analysis and presentations more impactful.</p> 
+  </div>
+  <!-- END BLOG ENTRIES -->
+</div>
+
+<!-- Footer -->
+<footer class="footer w3-container w3-padding-32 w3-margin-top">
+  <a href="https://www.linkedin.com/in/michael-ricci-456003282" class="fa fa-linkedin"></a>
+  <a href="https://github.com/MichaelRicci" class="fa fa-github"></a>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html>
